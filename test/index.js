@@ -9,7 +9,9 @@ async function __main__() {
     // console.log(Search)
     // Answers = await GREPPER.getAnswers("js loop", true);
     // console.log(Answers)
-    uStats = await GREPPER.userStats(98467, true)
-    console.log(uStats)
+    // uStats = await GREPPER.userStats(98467, true)
+    // console.log(uStats)
+    // Comment = await GREPPER.getComments(23);
+    // console.log(Comment)
 }
 __main__()

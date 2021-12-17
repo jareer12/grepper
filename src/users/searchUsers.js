@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 const chalk = require("chalk");
 
-async function searchUsers(user_name) {
+async function searchUsers(user_name, toLog) {
     return fetch(`https://www.codegrepper.com/api/autocomplete_users_search.php?q=${user_name}`)
         .then((response) => {
             return response.text();

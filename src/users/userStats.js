@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 const chalk = require("chalk");
 
-async function userStats(user_id) {
+async function userStats(user_id, toLog) {
     return fetch(`https://www.codegrepper.com/api/profile_helped_stats.php?id=${user_id}`)
         .then((response) => {
             return response.text();
