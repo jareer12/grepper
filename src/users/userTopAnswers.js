@@ -1,6 +1,7 @@
 const fetch = require('node-fetch');
+const chalk = require("chalk");
 
-async function userStats(user_id) {
+async function userTopAnswers(user_id) {
     return fetch(`https://www.codegrepper.com/api/profile_top_answers.php?id=${user_id}`)
         .then((response) => {
             return response.text();
@@ -33,7 +34,7 @@ async function userStats(user_id) {
                 }
             }
         }).catch(err => {
-            if (!toLog == true) { console.log(chalk.red(`An Unknown Error Occured`)) }
+            if (!toLog == true) { console.log(chalk.red(`An Unknown Error Occured`)); return; }
             console.log(chalk.red(err))
             return {
                 Success: false,
@@ -42,4 +43,4 @@ async function userStats(user_id) {
         })
 }
 
-module.exports = userStats;
+module.exports = userTopAnswers;

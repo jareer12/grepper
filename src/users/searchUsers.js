@@ -1,6 +1,7 @@
 const fetch = require('node-fetch');
+const chalk = require("chalk");
 
-async function userStats(user_name) {
+async function searchUsers(user_name) {
     return fetch(`https://www.codegrepper.com/api/autocomplete_users_search.php?q=${user_name}`)
         .then((response) => {
             return response.text();
@@ -29,7 +30,7 @@ async function userStats(user_name) {
                 }
             }
         }).catch(err => {
-            if (!toLog == true) { console.log(chalk.red(`An Unknown Error Occured`)) }
+            if (!toLog == true) { console.log(chalk.red(`An Unknown Error Occured`)); return; }
             console.log(chalk.red(err))
             return {
                 Success: false,
@@ -38,4 +39,4 @@ async function userStats(user_name) {
         })
 }
 
-module.exports = userStats;
+module.exports = searchUsers;

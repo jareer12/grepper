@@ -29,7 +29,7 @@ async function userBeltStats(user_id, toLog) {
                 }
             }
         }).catch(err => {
-            if (!toLog == true) { console.log(chalk.red(`An Unknown Error Occured`)) }
+            if (!toLog == true) { console.log(chalk.red(`An Unknown Error Occured`)); return; }
             console.log(chalk.red(err))
             return {
                 Success: false,
