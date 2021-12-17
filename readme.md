@@ -71,7 +71,7 @@ Fetches comments from code grepper coding answers, first parameter is `answerId(
 
 ```js
 async function __main__() {
-    Data = await GREPPER.getAnswers(23, true)
+    Data = await GREPPER.getComments(23, true)
     console.log(Data)
 } __main__()
 ```
