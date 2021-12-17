@@ -1,0 +1,26 @@
+{
+  "name": "grepper",
+  "version": "1.0.0",
+  "description": "Wrapper for CodeGrepper APIs",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jareer12/grepper.git"
+  },
+  "keywords": [],
+  "author": "jareer12",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jareer12/grepper/issues"
+  },
+  "homepage": "https://github.com/jareer12/grepper#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "fs": "0.0.1-security",
+    "node-fetch": "^2.6.6",
+    "path": "^0.12.7"
+  }
+}
