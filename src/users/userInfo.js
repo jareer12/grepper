@@ -1,6 +1,6 @@
 const fetch = require('node-fetch');
 const chalk = require("chalk");
-const { intToBool } = require("../misc/misc")
+const { toAvatar, intToBool } = require("../misc/misc")
 
 async function userInfo(user_id, toLog) {
     return await fetch(`https://www.codegrepper.com/api/profile.php?id=${user_id}`)
@@ -16,13 +16,13 @@ async function userInfo(user_id, toLog) {
                 }
                 return {
                     Success: true,
-                    Avatar: `https://www.codegrepper.com/profile_images/${Data.profile_image}`,
                     Location: Data.location,
                     Username: Data.real_name,
                     DisplayName: Data.fun_name,
                     Twitter: Data.twitter_name,
                     DonateLink: Data.donate_link,
                     HowToHelp: Data.how_to_help,
+                    Avatar: toAvatar(Data.profile_image),
                     isRankPrivate: intToBool(Data.is_rank_private),
                     isActivityPrivate: intToBool(Data.is_activity_private),
                     isExpertisePrivate: intToBool(Data.is_expertise_private),

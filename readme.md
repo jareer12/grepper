@@ -95,3 +95,16 @@ async function __main__() {
     console.log(Data)
 } __main__()
 ```
+
+### `getWhoToFollow()`
+
+This functions get all the recommended users to follow that you can find on the [feed](https://www.codegrepper.com/app/feed.php) page, first parameter is `[COOKIE]`.
+
+```js
+async function __main__() {
+    Data = await GREPPER.getComments(23, true)
+    console.log(Data)
+} __main__()
+```
+
+[COOKIE]: PHPSESSID(str)

@@ -21,7 +21,7 @@ async function checkCookie(cookie, toLog) {
                         }
                     }
                     if (Data.users) {
-                        res({ Success: true, Message: `Cookie ${cookie} is Valid` })
+                        res({ Success: true, Message: `Cookie ${cookie} is Valid`, Cookie: cookie })
                     }
                 } catch {
                     rej({ Success: false, Message: `Couldn't fetch data, server may be down temporarily` })
