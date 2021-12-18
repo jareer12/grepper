@@ -22,7 +22,7 @@ async function __main__() {
 __main__()
 ```
 
-## [Users][RawRepo]#users
+## [Users][UsersDocs]
 
 The last parameter of every fucntion is `toLog(bool)`, which is used to debug, the `toLog(bool)` parameter console logs important info. Set it to `true` to enable.
 
@@ -70,7 +70,7 @@ async function __main__() {
 } __main__()
 ```
 
-## [Answers][RawRepo]#answers
+## [Answers][AnswersDocs]
 
 ### `getAnswers()`
 
@@ -96,7 +96,7 @@ async function __main__() {
 
 ### `getWhoToFollow()`
 
-This functions get all the recommended users to follow that you can find on the [feed](https://www.codegrepper.com/app/feed.php) page, first parameter is [cookie variable].
+This functions get all the recommended users to follow that you can find on the [feed](https://www.codegrepper.com/app/feed.php) page, first parameter is [][Cookie].
 
 ```js
 async function __main__() {
@@ -105,5 +105,6 @@ async function __main__() {
 } __main__()
 ```
 
-[cookie variable]: PHPSESSID
-[RawRepo]: https://github.com/jareer12/code-grepper
+[UsersDocs]: https://github.com/jareer12/code-grepper#users
+[AnswersDocs]: https://github.com/jareer12/code-grepper#answers
+[Cookie]: https://github.com/jareer12/code-grepper#dealing-with-authorizations
