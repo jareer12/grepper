@@ -10,7 +10,7 @@ npm i grepper
    * [Global Functions](https://github.com/jareer12/grepper#global)
    * [Raw API Documentation](https://github.com/jareer12/code-grepper)
 
-**What is ToLog?**
+**What is ToLog?**<br>
 The last parameter of every fucntion is a boolean called `toLog`, which allows you to debug things and log them to console for better understanding of the function you are using, It logs important stuff like responses, errors, etc.
 
 ## [Global][GlobalDocs]
