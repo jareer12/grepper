@@ -1,3 +1,7 @@
+<!--#
+Cookie=`PHPSESSID`
+ATTRIBUTION=Mark Wahlberg
+$-->
 ## Installation
 
 ```shell
@@ -98,7 +102,7 @@ async function __main__() {
 
 ### `getWhoToFollow()`
 
-This functions get all the recommended users to follow that you can find on the [feed](https://www.codegrepper.com/app/feed.php) page, first parameter is [_Cookie].
+This functions get all the recommended users to follow that you can find on the [feed](https://www.codegrepper.com/app/feed.php) page, first parameter is {{Cookie}}.
 
 ```js
 async function __main__() {
@@ -106,7 +110,3 @@ async function __main__() {
     console.log(Data)
 } __main__()
 ```
-
----
-_Cookie: `PHPSESSID`
----
