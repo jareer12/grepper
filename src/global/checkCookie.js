@@ -2,6 +2,24 @@ const fetch = require('node-fetch');
 const chalk = require("chalk");
 
 async function checkCookie(cookie, toLog) {
+    if (!cookie || cookie == null || cookie == undefined) {
+        if (toLog == true) {
+            console.log(chalk.red(`No Cookie Provided`))
+        }
+        return {
+            Success: false,
+            Message: `No Cookie Provided`
+        }
+    }
+    if (typeof cookie !== 'string') {
+        if (toLog == true) {
+            console.log(chalk.red(`PHPSESSID must be a string, got ${typeof cookie}(${cookie})`))
+        }
+        return {
+            Success: false,
+            Message: `PHPSESSID must be a string, got ${typeof cookie}`
+        }
+    }
     return new Promise((res, rej) => {
         return fetch(`https://www.codegrepper.com/api/get_belt_users.php?offset=0&limit=1`, {
             credentials: 'include',

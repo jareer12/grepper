@@ -3,6 +3,24 @@ const chalk = require("chalk");
 const { toAvatar } = require("../misc/misc")
 
 async function getCommunity(cookie, limit, toLog) {
+    if (!cookie || cookie == null || cookie == undefined) {
+        if (toLog == true) {
+            console.log(chalk.red(`No Cookie Provided`))
+        }
+        return {
+            Success: false,
+            Message: `No Cookie Provided`
+        }
+    }
+    if (typeof cookie !== 'string') {
+        if (toLog == true) {
+            console.log(chalk.red(`PHPSESSID must be a string, got ${typeof cookie}(${cookie})`))
+        }
+        return {
+            Success: false,
+            Message: `PHPSESSID must be a string, got ${typeof cookie}`
+        }
+    }
     if (!limit) {
         limit = 50;
         if (toLog == true) { console.log(chalk.green(`A Valid Limit Was not Provided, Limit must be an Integer`)) }
@@ -20,6 +38,14 @@ async function getCommunity(cookie, limit, toLog) {
             try {
                 data_array = []
                 Data = JSON.parse(myJson).users
+                if (Data.length <= 0) {
+                    if (toLog == true) {
+                        console.log(chalk.red(`No Data Found`))
+                    }
+                    return {
+                        Message: `No Data Found`
+                    }
+                }
                 for (i = 0; i < Data.length; i++) {
                     CU = Data[i];
                     data_array.push({

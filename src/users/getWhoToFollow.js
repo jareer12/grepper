@@ -1,8 +1,26 @@
 const fetch = require('node-fetch');
 const chalk = require("chalk");
-const { toAvatar } = require("../misc/misc")
+const { toAvatar } = require("../misc/misc");
 
-async function getCommunity(cookie, toLog) {
+async function getWhoToFollow(cookie, toLog) {
+    if (!cookie || cookie == null || cookie == undefined) {
+        if (toLog == true) {
+            console.log(chalk.red(`No Cookie Provided`))
+        }
+        return {
+            Success: false,
+            Message: `No Cookie Provided`
+        }
+    }
+    if (typeof cookie !== 'string') {
+        if (toLog == true) {
+            console.log(chalk.red(`PHPSESSID must be a string, got ${typeof cookie}(${cookie})`))
+        }
+        return {
+            Success: false,
+            Message: `PHPSESSID must be a string, got ${typeof cookie}`
+        }
+    }
     return fetch(`https://www.codegrepper.com/api/get_who_to_follow.php`, {
         headers: {
             cookie: `PHPSESSID=${cookie}`
@@ -12,20 +30,20 @@ async function getCommunity(cookie, toLog) {
             return response.text();
         })
         .then((myJson) => {
-            if (myJson.success) {
-                if (myJson.success == false && myJson.reason == "Unauthorized") {
-                    if (toLog == true) {
-                        console.log(chalk.red(`Unauthorized, Provided Cookie is invalid`))
-                    }
-                    return {
-                        Success: false,
-                        Message: `Unauthorized, Provided Cookie is invalid`
+            data_array = []
+            try {
+                Data = JSON.parse(myJson).users
+                if (Data.success) {
+                    if (Data.success == false && Data.reason == "Unauthorized") {
+                        if (toLog == true) {
+                            console.log(chalk.red(`Unauthorized, Provided Cookie is invalid`))
+                        }
+                        return {
+                            Success: false,
+                            Message: `Unauthorized, Provided Cookie is invalid`
+                        }
                     }
                 }
-            }
-            try {
-                data_array = []
-                Data = JSON.parse(myJson).users
                 for (i = 0; i < Data.length; i++) {
                     CU = Data[i];
                     data_array.push({
@@ -64,4 +82,4 @@ async function getCommunity(cookie, toLog) {
         })
 }
 
-module.exports = getCommunity;
+module.exports = getWhoToFollow;

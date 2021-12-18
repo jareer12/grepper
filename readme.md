@@ -112,7 +112,33 @@ async function __main__() {
 } __main__()
 ```
 
+## [Settings][SettingsDocs]
+
+### `enableCommentNotif()`
+
+Enables your comment notifications from the settings.
+
+```js
+async function __main__() {
+    Data = await GREPPER.enableCommentNotif("YOUR_PHPSESSID", true)
+    console.log(Data)
+} __main__()
+```
+
+### `disableCommentNotif()`
+
+Disables your comment notifications from the settings.
+
+```js
+async function __main__() {
+    Data = await GREPPER.disableCommentNotif("YOUR_PHPSESSID", true)
+    console.log(Data)
+} __main__()
+```
+
+
 [UsersDocs]: https://github.com/jareer12/code-grepper#users
 [AnswersDocs]: https://github.com/jareer12/code-grepper#answers
+[SettingsDocs]: https://github.com/jareer12/code-grepper#settings
 [PHPSESSID]: https://github.com/jareer12/code-grepper#dealing-with-authorizations
 [GlobalDocs]: https://github.com/jareer12/code-grepper#codegrepper-api-docsunofficial
