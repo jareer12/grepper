@@ -10,8 +10,11 @@ npm i grepper
    * [Global Functions](https://github.com/jareer12/grepper#global)
    * [Raw API Documentation](https://github.com/jareer12/code-grepper)
 
+**What is ToLog?**
+The last parameter of every fucntion is a boolean called `toLog`, which allows you to debug things and log them to console for better understanding of the function you are using, It logs important stuff like responses, errors, etc.
+
 ## [Global][GlobalDocs]
-    
+
 ### `checkCookie()`
 
 To check if a cookie is valid use this function. The first parameter is the [PHPSESSID][].
@@ -29,8 +32,6 @@ __main__()
 ```
 
 ## [Users][UsersDocs]
-
-The last parameter of every fucntion is `toLog(bool)`, which is used to debug, the `toLog(bool)` parameter console logs important info. Set it to `true` to enable.
 
 ### `userInfo()`
 
