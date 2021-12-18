@@ -5,7 +5,7 @@ npm i grepper
 ```
 
 ## Quick Guide
-   * [User Related Functions][#users]
+   * [User Related Functions](https://github.com/jareer12/grepper#users)
 
 ## [Global][GlobalDocs]
     
