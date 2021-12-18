@@ -107,4 +107,4 @@ async function __main__() {
 } __main__()
 ```
 
-[COOKIE]: `PHPSESSID(str)`
+[COOKIE]: `PHPSESSID`
