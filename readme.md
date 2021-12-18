@@ -4,7 +4,10 @@
 npm i grepper
 ```
 
-## Global[GlobalDocs]
+## Quick Guide
+   * [User Related Functions][#users]
+
+## [Global][GlobalDocs]
     
 ### `checkCookie()`
 
