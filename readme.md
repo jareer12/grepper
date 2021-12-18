@@ -22,7 +22,7 @@ async function __main__() {
 __main__()
 ```
 
-## [Users]([RawRepo]#users)
+## [Users][RawRepo]#users
 
 The last parameter of every fucntion is `toLog(bool)`, which is used to debug, the `toLog(bool)` parameter console logs important info. Set it to `true` to enable.
 
@@ -70,7 +70,7 @@ async function __main__() {
 } __main__()
 ```
 
-## [Answers]([RawRepo]#answers)
+## [Answers][RawRepo]#answers
 
 ### `getAnswers()`
 
