@@ -3,7 +3,7 @@
 ```shell
 npm i grepper
 ```
-![https://img.shields.io/npm/dt/grepper?color=8a1fd1&style=for-the-badge]()
+![https://img.shields.io/npm/dt/grepper?color=8a1fd1&style=for-the-badge](https://img.shields.io/npm/dt/grepper?color=8a1fd1&style=for-the-badge)
 
 ## Quick Guide
    * [User Related Functions](https://github.com/jareer12/grepper#users)
