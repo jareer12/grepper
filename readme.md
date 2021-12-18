@@ -8,7 +8,7 @@ npm i grepper
     
 ### `checkCookie()`
 
-To check if a cookie is valid use this function.
+To check if a cookie is valid use this function. The first parameter is the [PHPSESSID][].
 
 ```js
 async function __main__() {
@@ -96,7 +96,7 @@ async function __main__() {
 
 ### `getWhoToFollow()`
 
-This functions get all the recommended users to follow that you can find on the [feed](https://www.codegrepper.com/app/feed.php) page, first parameter is [Cookie][].
+This functions get all the recommended users to follow that you can find on the [feed](https://www.codegrepper.com/app/feed.php) page, first parameter is [PHPSESSID][].
 
 ```js
 async function __main__() {
@@ -107,4 +107,4 @@ async function __main__() {
 
 [UsersDocs]: https://github.com/jareer12/code-grepper#users
 [AnswersDocs]: https://github.com/jareer12/code-grepper#answers
-[Cookie]: https://github.com/jareer12/code-grepper#dealing-with-authorizations
+[PHPSESSID]: https://github.com/jareer12/code-grepper#dealing-with-authorizations
