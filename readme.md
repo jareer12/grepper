@@ -98,7 +98,7 @@ async function __main__() {
 
 ### `getWhoToFollow()`
 
-This functions get all the recommended users to follow that you can find on the [feed](https://www.codegrepper.com/app/feed.php) page, first parameter is [COOKIE].
+This functions get all the recommended users to follow that you can find on the [feed](https://www.codegrepper.com/app/feed.php) page, first parameter is [_Cookie].
 
 ```js
 async function __main__() {
@@ -107,4 +107,6 @@ async function __main__() {
 } __main__()
 ```
 
-[COOKIE]: `PHPSESSID`
+---
+_Cookie: `PHPSESSID`
+---
