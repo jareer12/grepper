@@ -7,6 +7,7 @@ npm i grepper
 ## Quick Guide
    * [User Related Functions](https://github.com/jareer12/grepper#users)
    * [Answer Related Functions](https://github.com/jareer12/grepper#answers)
+   * [Settings Related Functions](https://github.com/jareer12/grepper#settings)
    * [Global Functions](https://github.com/jareer12/grepper#global)
    * [Raw API Documentation](https://github.com/jareer12/code-grepper)
 
