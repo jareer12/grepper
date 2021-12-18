@@ -10,7 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/jareer12/grepper.git"
   },
-  "keywords": [],
+  "keywords": [
+    "grepper",
+    "code grepper",
+    "grepper api"
+  ],
   "author": "jareer12",
   "license": "CC-BY-4.0",
   "bugs": {
