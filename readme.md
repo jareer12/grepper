@@ -96,7 +96,7 @@ async function __main__() {
 
 ### `getWhoToFollow()`
 
-This functions get all the recommended users to follow that you can find on the [feed](https://www.codegrepper.com/app/feed.php) page, first parameter is [][Cookie].
+This functions get all the recommended users to follow that you can find on the [feed](https://www.codegrepper.com/app/feed.php) page, first parameter is [Cookie][].
 
 ```js
 async function __main__() {
