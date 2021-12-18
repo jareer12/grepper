@@ -14,9 +14,7 @@ To check if a cookie is valid use this function.
 async function __main__() {
     GREPPER.checkCookie("YOUR_PHPSESSID_HERE", true)
         .then(res => {
-            /* Cookie is Valid
-               Your Code Here  */
-            console.log(res)
+            /* Your Code Here */
         }).catch(err => {
             console.log(err)
         })
@@ -24,7 +22,7 @@ async function __main__() {
 __main__()
 ```
 
-## [Users]()
+## [Users]([RawRepo]#users)
 
 The last parameter of every fucntion is `toLog(bool)`, which is used to debug, the `toLog(bool)` parameter console logs important info. Set it to `true` to enable.
 
@@ -72,7 +70,7 @@ async function __main__() {
 } __main__()
 ```
 
-## [Answers]()
+## [Answers]([RawRepo]#answers)
 
 ### `getAnswers()`
 
@@ -108,3 +106,4 @@ async function __main__() {
 ```
 
 [cookie variable]: PHPSESSID
+[RawRepo]: https://github.com/jareer12/code-grepper
