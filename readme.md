@@ -4,7 +4,7 @@
 npm i grepper
 ```
 
-## Global
+## Global[GlobalDocs]
     
 ### `checkCookie()`
 
@@ -108,3 +108,4 @@ async function __main__() {
 [UsersDocs]: https://github.com/jareer12/code-grepper#users
 [AnswersDocs]: https://github.com/jareer12/code-grepper#answers
 [PHPSESSID]: https://github.com/jareer12/code-grepper#dealing-with-authorizations
+[GlobalDocs]: https://github.com/jareer12/code-grepper#codegrepper-api-docsunofficial
