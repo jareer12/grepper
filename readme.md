@@ -4,6 +4,26 @@
 npm i grepper
 ```
 
+## Global
+    
+### `checkCookie()`
+
+To check if a cookie is valid use this function.
+
+```js
+async function __main__() {
+    GREPPER.checkCookie("YOUR_PHPSESSID_HERE", true)
+        .then(res => {
+            /* Cookie is Valid
+               Your Code Here  */
+            console.log(res)
+        }).catch(err => {
+            console.log(err)
+        })
+}
+__main__()
+```
+
 ## [Users]()
 
 The last parameter of every fucntion is `toLog(bool)`, which is used to debug, the `toLog(bool)` parameter console logs important info. Set it to `true` to enable.
