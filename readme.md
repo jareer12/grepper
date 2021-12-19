@@ -167,7 +167,7 @@ async function __main__() {
 } __main__()
 ```
 
-## Smart Usage
+## [Smart Usage][PHPSESSID]
 
 The best way to use functions that use authorizations is to check the cookie before using. Example given below.
 
