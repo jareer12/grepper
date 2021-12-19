@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 const chalk = require("chalk");
 
 async function checkCookie(cookie, toLog) {
-    if (!cookie || cookie == null || cookie == undefined) {
+    if (!cookie) {
         if (toLog == true) {
             console.log(chalk.red(`No Cookie Provided`))
         }
@@ -23,7 +23,9 @@ async function checkCookie(cookie, toLog) {
     return new Promise((res, rej) => {
         return fetch(`https://www.codegrepper.com/api/get_belt_users.php?offset=0&limit=1`, {
             credentials: 'include',
-            cookie: `PHPSESSID=${cookie}`
+            headers: {
+                cookie: `PHPSESSID=${cookie}`
+            }
         })
             .then((response) => {
                 return response.text();

@@ -57,6 +57,17 @@ async function __main__() {
 } __main__()
 ```
 
+### `userByCookie()`
+
+Fetches code Grepper user's information by their [PHPSESSID][].
+
+```js
+async function __main__() {
+    Data = await GREPPER.userByCookie("YOUR_PHPSESSID", true)
+    console.log(`Successfuly Logged in as ${Data.Name}`)
+} __main__()
+```
+
 ### `userStats()`
 
 Fetches The user's code grepper belt stats. The first parameter is the `user_id(int)`.
@@ -149,6 +160,7 @@ async function __main__() {
 } __main__()
 ```
 
+## Smart Usage
 
 [UsersDocs]: https://github.com/jareer12/code-grepper#users
 [AnswersDocs]: https://github.com/jareer12/code-grepper#answers

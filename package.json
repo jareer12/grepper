@@ -1,5 +1,5 @@
 {
-  "name": "@jareer12/grepper",
+  "name": "grepper",
   "version": "1.0.1",
   "description": "A Wrapper for CodeGrepper APIs",
   "main": "./src/index.js",
