@@ -9,7 +9,8 @@ yarn add grepper
 ```js
 const GREPPER = require("grepper")
 ```
-![Overall Downloads](https://img.shields.io/npm/dt/grepper?color=4553ff&style=for-the-badge)
+![Overall Downloads](https://img.shields.io/npm/dt/grepper)
+![Overall Downloads](https://img.shields.io/npm/v/grepper)
 
 ## Quick Guide
    * [User Related Functions](https://github.com/jareer12/grepper#users)
