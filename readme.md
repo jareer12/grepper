@@ -75,13 +75,24 @@ async function __main__() {
 } __main__()
 ```
 
-### `userStats()`
+### `userBeltStats()`
 
 Fetches The user's code grepper belt stats. The first parameter is the `user_id(int)`.
 
 ```js
 async function __main__() {
     Data = await GREPPER.userBeltStats(98467, true)
+    console.log(Data)
+} __main__()
+```
+
+### `userStats()`
+
+Fetches The user's code grepper helped and problems solved stats. The first parameter is the `user_id(int)`.
+
+```js
+async function __main__() {
+    Data = await GREPPER.userStats(98467, true)
     console.log(Data)
 } __main__()
 ```
