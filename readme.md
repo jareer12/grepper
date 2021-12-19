@@ -1,7 +1,7 @@
 ## Installation
 
 ```shell
-npm i grepper
+npm install grepper
 ```
 ```js
 const GREPPER = require("grepper")
