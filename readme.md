@@ -32,7 +32,7 @@ To check if a cookie is valid use this function. The first parameter is the [PHP
 async function __main__() {
     GREPPER.checkCookie("YOUR_PHPSESSID_HERE", true)
         .then(res => {
-            /* Your Code Here */
+            // Your Code Goes Here
         }).catch(err => {
             console.log(err)
         })

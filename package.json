@@ -1,21 +1,19 @@
 {
-  "name": "grepper",
+  "name": "@jub0t/grepper",
   "version": "1.0.2",
   "description": "A Wrapper for CodeGrepper APIs",
+  "type": "module",
   "main": "./src/index.js",
   "scripts": {
     "test": "node test/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jareer12/grepper.git"
-  },
+  "repository": "git+https://github.com/jareer12/grepper.git",
   "keywords": [
     "grepper",
     "code grepper",
     "grepper api"
   ],
-  "author": "jareer12",
+  "author": "@jub0t",
   "license": "CC-BY-4.0",
   "bugs": {
     "url": "https://github.com/jareer12/grepper/issues"
