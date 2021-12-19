@@ -167,7 +167,7 @@ The best way to use functions that use authorizations is to check the cookie bef
 ```js
 async function __main__() {
     GREPPER.checkCookie("YOUR_PHPSESSID", true).then(async function (Data) {
-        Update = await GREPPER.enableCommentNotif(Data.Cookie) // Call the enableCommentNotif function with the valid Cookie
+        Update = await GREPPER.enableCommentNotif(Data.Cookie) // Call the function with the valid Cookie
         console.log(Update) // Log the data from enableCommentNotif function
     }).catch(error => {
         console.log(error) // Log the error if exists
