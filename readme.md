@@ -162,6 +162,19 @@ async function __main__() {
 
 ## Smart Usage
 
+The best way to use functions that use authorizations is to check the cookie before using. Example given below.
+
+```js
+async function __main__() {
+    GREPPER.checkCookie("YOUR_PHPSESSID", true).then(async function (Data) {
+        Update = await GREPPER.enableCommentNotif(Data.Cookie) // Call the enableCommentNotif fucntion
+        console.log(Update) // Log the data from enableCommentNotif function
+    }).catch(error => {
+        console.log(error) // Log the error if exists
+    })
+} __main__()
+```
+
 [UsersDocs]: https://github.com/jareer12/code-grepper#users
 [AnswersDocs]: https://github.com/jareer12/code-grepper#answers
 [SettingsDocs]: https://github.com/jareer12/code-grepper#settings

@@ -29,7 +29,7 @@ async function disableCommentNotif(cookie, toLog) {
         },
         "body": JSON.stringify({
             update_name: "notify_on_comments",
-            update_value: 0 // Disable, 1 for enable
+            update_value: 1
         })
     })
         .then((response) => {
