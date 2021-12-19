@@ -3,6 +3,24 @@ const chalk = require("chalk");
 const { intToBool } = require("../misc/misc")
 
 async function getAnswers(query, toLog) {
+    if (!query || query == null || query == undefined) {
+        if (toLog == true) {
+            console.log(chalk.red(`No Answer Query Provided`))
+        }
+        return {
+            Success: false,
+            Message: `No Answer Query Provided`
+        }
+    }
+    if (typeof query !== 'string') {
+        if (toLog == true) {
+            console.log(chalk.red(`Query must be a string, got ${typeof query}(${query})`))
+        }
+        return {
+            Success: false,
+            Message: `Query must be a string, got ${typeof query}`
+        }
+    }
     return await fetch(`https://www.codegrepper.com/api/get_answers_1.php?v=3&s=${encodeURI(query)}`)
         .then((response) => {
             return response.text();

@@ -3,7 +3,16 @@ const chalk = require("chalk");
 const { toAvatar } = require("../misc/misc")
 
 async function searchUsers(user_name, toLog) {
-    return fetch(`https://www.codegrepper.com/api/autocomplete_users_search.php?q=${user_name}`)
+    if (toLog == true) {
+        console.log(chalk.red(`No Username Query Provided`))
+    }
+    if (!user_name || user_name == null || user_name == undefined) {
+        return {
+            Success: false,
+            Message: `No Username Query Provided`
+        }
+    }
+    return fetch(`https://www.codegrepper.com/api/autocomplete_users_search.php?q=${encodeURI(user_name)}`)
         .then((response) => {
             return response.text();
         })

@@ -33,6 +33,17 @@ async function __main__() {
 __main__()
 ```
 
+### `getCommunity()`
+
+Function to get codegrepper top users(community) from the community page. The first parameter is the [PHPSESSID][], The second parameter is limit of users to get(`default: 100`).
+
+```js
+async function __main__() {
+    Data = await GREPPER.getCommunity("YOUR_PHPSESSID", 10, true)
+    console.log(Data)
+} __main__()
+```
+
 ## [Users][UsersDocs]
 
 ### `userInfo()`
@@ -79,6 +90,17 @@ async function __main__() {
 } __main__()
 ```
 
+### `getWhoToFollow()`
+
+This functions gets all the recommended users to follow that you can find on the [feed](https://www.codegrepper.com/app/feed.php) page, first parameter is [PHPSESSID][].
+
+```js
+async function __main__() {
+    Data = await GREPPER.getWhoToFollow("YOUR_PHPSESSID", true)
+    console.log(Data)
+} __main__()
+```
+
 ## [Answers][AnswersDocs]
 
 ### `getAnswers()`
@@ -95,17 +117,6 @@ async function __main__() {
 ### `getComments()`
 
 Fetches comments from code grepper coding answers, first parameter is `answerId(int)`.
-
-```js
-async function __main__() {
-    Data = await GREPPER.getComments(23, true)
-    console.log(Data)
-} __main__()
-```
-
-### `getWhoToFollow()`
-
-This functions get all the recommended users to follow that you can find on the [feed](https://www.codegrepper.com/app/feed.php) page, first parameter is [PHPSESSID][].
 
 ```js
 async function __main__() {
