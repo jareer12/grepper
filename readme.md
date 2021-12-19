@@ -3,6 +3,9 @@
 ```shell
 npm install grepper
 ```
+```shell
+yarn add grepper
+```
 ```js
 const GREPPER = require("grepper")
 ```
