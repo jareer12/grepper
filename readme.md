@@ -156,6 +156,16 @@ async function __main__() {
 } __main__()
 ```
 
+### `getSimiliarQueries()`
+
+Fetches similiar queries like the one provided, eg, if you enter `js loop` it will return `javascript loop`, `loop in javascript`, `loop javascript`
+
+```js
+async function __main__() {
+    Data = await GREPPER.getSimiliarQueries("js loop", true)
+    console.log(Data)
+} __main__()
+```
 ## [Settings][SettingsDocs]
 
 ### `enableCommentNotif()`
