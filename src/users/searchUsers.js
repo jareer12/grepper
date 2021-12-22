@@ -3,10 +3,10 @@ const chalk = require("chalk");
 const { toAvatar } = require("../misc/misc")
 
 async function searchUsers(user_name, toLog) {
-    if (toLog == true) {
-        console.log(chalk.red(`No Username Query Provided`))
-    }
     if (!user_name || user_name == null || user_name == undefined) {
+        if (toLog == true) {
+            console.log(chalk.red(`No Username Query Provided`))
+        }
         return {
             Success: false,
             Message: `No Username Query Provided`

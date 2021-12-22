@@ -7,7 +7,7 @@ npm install grepper
 yarn add grepper
 ```
 ```js
-const GREPPER = require("grepper")
+const GREPPER = require("grepper");
 ```
 ![Overall Downloads](https://img.shields.io/discord/905186462486646814)
 ![Overall Downloads](https://img.shields.io/npm/dt/grepper)

@@ -2,6 +2,24 @@ const fetch = require('node-fetch');
 const chalk = require("chalk");
 
 async function getComments(answer_id, toLog) {
+    if (!answer_id || answer_id == null || answer_id == undefined) {
+        if (toLog == true) {
+            console.log(chalk.red(`No UserId Query Provided`))
+        }
+        return {
+            Success: false,
+            Message: `No UserId Query Provided`
+        }
+    }
+    if (typeof answer_id !== 'number') {
+        if (toLog == true) {
+            console.log(chalk.red(`PHPSESSID must be a number, got ${typeof answer_id}(${v})`))
+        }
+        return {
+            Success: false,
+            Message: `PHPSESSID must be a number, got ${typeof answer_id}`
+        }
+    }
     return await fetch(`https://www.codegrepper.com/api/get_answers_comments.php?aid=${answer_id}`)
         .then((response) => {
             return response.text();

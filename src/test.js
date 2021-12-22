@@ -1,4 +1,4 @@
-const GREPPER = require("../src/index")
+const GREPPER = require("./index")
 
 async function __main__() {
     Data = await GREPPER.getSimiliarQueries("js loop", true);

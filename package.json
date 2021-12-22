@@ -1,10 +1,10 @@
 {
   "name": "@jub0t/grepper",
   "version": "1.0.2",
-  "description": "A Wrapper for CodeGrepper APIs",
+  "description": "A Light-weight Wrapper for CodeGrepper APIs",
   "main": "./src/index.js",
   "scripts": {
-    "test": "node test/index.js"
+    "test": "node ./src/test.js"
   },
   "repository": "git+https://github.com/jareer12/grepper.git",
   "keywords": [

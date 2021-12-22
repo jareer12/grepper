@@ -2,6 +2,24 @@ const fetch = require('node-fetch');
 const chalk = require("chalk");
 
 async function userTopAnswers(user_id, toLog) {
+    if (!user_id || user_id == null || user_id == undefined) {
+        if (toLog == true) {
+            console.log(chalk.red(`No UserId Query Provided`))
+        }
+        return {
+            Success: false,
+            Message: `No UserId Query Provided`
+        }
+    }
+    if (typeof user_id !== 'number') {
+        if (toLog == true) {
+            console.log(chalk.red(`PHPSESSID must be a number, got ${typeof user_id}(${v})`))
+        }
+        return {
+            Success: false,
+            Message: `PHPSESSID must be a number, got ${typeof user_id}`
+        }
+    }
     return fetch(`https://www.codegrepper.com/api/profile_top_answers.php?id=${user_id}`)
         .then((response) => {
             return response.text();
