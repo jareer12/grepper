@@ -1,10 +1,10 @@
 ## Installation
 
 ```shell
-npm install grepper
+yarn add grepper
 ```
 ```shell
-yarn add grepper
+npm install grepper
 ```
 ```js
 const GREPPER = require("grepper");
@@ -15,11 +15,11 @@ const GREPPER = require("grepper");
 ![Overall Downloads](https://img.shields.io/npm/l/grepper)
 
 ## Quick Guide
+   * [Global Functions](https://github.com/jareer12/grepper#global)
    * [User Related Functions](https://github.com/jareer12/grepper#users)
    * [Answer Related Functions](https://github.com/jareer12/grepper#answers)
    * [Settings Related Functions](https://github.com/jareer12/grepper#settings)
-   * [Global Functions](https://github.com/jareer12/grepper#global)
-   * [Raw API Documentation](https://github.com/jareer12/code-grepper)
+   * **[Raw API Documentation](https://github.com/jareer12/code-grepper)**
 
 **What is ToLog?**<br>
 The last parameter of every function is a boolean called `toLog`, which allows you to debug things by loging them to console for better understanding of the function you are using, It logs important stuff like responses, errors, etc.
