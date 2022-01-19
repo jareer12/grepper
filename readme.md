@@ -202,6 +202,18 @@ async function __main__() {
 } __main__()
 ```
 
+### `getPrivacySettings()`
+
+Gets you privacy settings.
+
+```js
+async function __main__() {
+    Data = await GREPPER.getPrivacySettings("YOUR_PHPSESSID", true)
+    console.log(Data) // Data.Data is the actual object with data
+} __main__()
+```
+
+
 ## [Smart Usage][PHPSESSID]
 
 The best way to use functions that use authorizations is to check the cookie before using. Example given below.
