@@ -11,7 +11,7 @@ async function userBeltStats(user_id) {
   if (typeof user_id !== "number") {
     return {
       Success: false,
-      Message: `PHPSESSID must be a number, got ${typeof user_id}`,
+      Message: `userId must be a number, got ${typeof user_id}`,
     };
   }
   return fetch(

@@ -18,7 +18,7 @@ async function sendPasswordResetEmail(email) {
   if (typeof email !== "string") {
     return {
       Success: false,
-      Message: `PHPSESSID must be a string, got ${typeof email}`,
+      Message: `Token must be a string, got ${typeof email}`,
     };
   }
 

@@ -22,9 +22,9 @@ async function checkToken(tokenData) {
           Data = JSON.parse(myJson);
           if (Data.success) {
             if (Data.success == false && Data.reason == "Unauthorized") {
-              rej({ Success: false, Message: `Invalid Cookie Provided` });
+              rej({ Success: false, Message: `Invalid Token Provided` });
             } else if (Data.success == false) {
-              rej({ Success: false, Message: `Invalid Cookie Provided` });
+              rej({ Success: false, Message: `Invalid Token Provided` });
             }
           }
           if (Data.users) {

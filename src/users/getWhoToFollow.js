@@ -20,7 +20,7 @@ async function getWhoToFollow(tokenData) {
           if (Data.success == false && Data.reason == "Unauthorized") {
             return {
               Success: false,
-              Message: `Unauthorized, Provided Cookie is invalid`,
+              Message: `Unauthorized, Provided Token is invalid`,
             };
           }
         }

@@ -1,6 +1,6 @@
 {
   "name": "@jub0t/grepper",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "A Light-weight Wrapper for CodeGrepper APIs",
   "main": "./src/index.js",
   "scripts": {
@@ -21,7 +21,7 @@
   "dependencies": {
     "form-data": "^4.0.0",
     "fs": "0.0.1-security",
-    "node-fetch": "^2.6.6",
+    "node-fetch": "^2.6.1",
     "path": "^0.12.7"
   }
 }

@@ -10,7 +10,7 @@ async function getComments(answer_id) {
   if (typeof answer_id !== "number") {
     return {
       Success: false,
-      Message: `PHPSESSID must be a number, got ${typeof answer_id}`,
+      Message: `answerId must be a number, got ${typeof answer_id}`,
     };
   }
   return await fetch(

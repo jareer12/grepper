@@ -39,7 +39,7 @@ async function disableCommentNotif(tokenData) {
             if (myJson.success == false && myJson.reason == "Unauthorized") {
               return {
                 Success: false,
-                Message: `Unauthorized, Cookie is not valid`,
+                Message: `Unauthorized, Token is not valid`,
               };
             }
           }
