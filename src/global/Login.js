@@ -1,11 +1,12 @@
 const fetch = require("node-fetch");
 const FormData = require("form-data");
+const { isEmail } = require("../misc/misc");
 
 async function sendPasswordResetEmail(data) {
   const DataToSend = new FormData();
   DataToSend.append("email", data.email);
   DataToSend.append("password", data.password);
-  return fetch(`https://www.codegrepper.com/api/register.php`, {
+  return fetch(`https://www.codegrepper.com/api/login.php`, {
     method: "POST",
     body: DataToSend,
   })
@@ -18,7 +19,7 @@ async function sendPasswordResetEmail(data) {
         if (Data.success) {
           return {
             Success: true,
-            Message: `Successfuly Registered New Account.`,
+            Message: `Successfuly logged in.`,
             Data: Data,
           };
         } else {
