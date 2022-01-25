@@ -1,4 +1,4 @@
-## Installation
+# Grepper [![Overall Downloads](https://img.shields.io/npm/v/grepper)](https://www.npmjs.com/package/grepper)
 
 ```shell
 yarn add grepper
@@ -11,11 +11,6 @@ npm install grepper
 ```js
 const GREPPER = require("grepper");
 ```
-
-![Overall Downloads](https://img.shields.io/discord/905186462486646814)
-[![Overall Downloads](https://img.shields.io/npm/dt/grepper)](https://www.npmjs.com/package/grepper)
-![Overall Downloads](https://img.shields.io/npm/v/grepper)
-![Overall Downloads](https://img.shields.io/npm/l/grepper)
 
 ## Quick Guide
 
