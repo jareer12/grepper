@@ -51,7 +51,6 @@ async function getCommunity(tokenData, limit) {
       }
     })
     .catch((err) => {
-      console.log(chalk.red(err));
       return {
         Success: false,
         Message: err,

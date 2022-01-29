@@ -53,7 +53,6 @@ async function sendPasswordResetEmail(email) {
       }
     })
     .catch((err) => {
-      console.log(chalk.red(err));
       return {
         Success: false,
         Message: err,

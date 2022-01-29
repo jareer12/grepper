@@ -46,7 +46,7 @@ Nominate a user as a super nominee.
 ```js
 async function __main__() {
   const Data = await GREPPER.nominateSuper({
-    nomineeId: 98467,
+    nomineeId: 98467, // The user you want to nominate
     awardName: "best_coder",
     userId: YOUR_USER_ID,
     token: YOUR_ACCESS_TOKEN,

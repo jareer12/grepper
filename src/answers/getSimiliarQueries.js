@@ -44,7 +44,6 @@ async function getSimiliarQueries(query) {
       }
     })
     .catch((err) => {
-      console.log(chalk.red(err));
       return {
         Success: false,
         Message: err,
