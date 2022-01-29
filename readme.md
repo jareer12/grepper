@@ -39,6 +39,29 @@ async function __main__() {
 __main__();
 ```
 
+### `nominateSuper()`
+
+Nominate a user as a super nominee.
+
+```js
+async function __main__() {
+  const Data = await GREPPER.nominateSuper({
+    nomineeId: 98467,
+    awardName: "best_coder",
+    userId: YOUR_USER_ID,
+    token: YOUR_ACCESS_TOKEN,
+  });
+  console.log(Data);
+}
+__main__();
+```
+
+```yaml
+Award Names:
+
+most_helpful, hard_worker, class_clown, best_smile, most_likely_billion, best_hair, most_intelligent, best_coder, most_attractive, most_creative
+```
+
 ### `Login()`
 
 Login with username & password.

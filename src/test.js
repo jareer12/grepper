@@ -8,9 +8,12 @@ async function __main__() {
     email: tempUser,
     password: tempPass,
   });
-  const Account = await GREPPER.Login({
-    token: Data.access_token,
-    userId: Data.user_id,
+  console.log(Data);
+  const Account = await GREPPER.nominateSuper({
+    nomineeId: 98467,
+    awardName: "best_coder",
+    userId: Data.Data.user_id,
+    token: Data.Data.access_token,
   });
   console.log(Account);
 }
