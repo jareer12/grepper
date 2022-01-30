@@ -27,10 +27,10 @@ async function updateProfileImage(data) {
       return response.text();
     })
     .then((results) => {
-      if (results.Success == false) {
+      if (JSON.parse(results).Success == false) {
         return {
           Success: false,
-          Message: results.Message,
+          Message: JSON.parse(results).Message,
         };
       }
       return {

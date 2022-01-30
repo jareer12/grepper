@@ -31,6 +31,12 @@ async function updateProfile(data) {
       return response.text();
     })
     .then((results) => {
+      if (JSON.parse(results).Success == false) {
+        return {
+          Success: false,
+          Message: JSON.parse(results).Message,
+        };
+      }
       return {
         Success: true,
         Message: `Profile Updated`,
