@@ -36,6 +36,7 @@ async function userInfo(user_id) {
           twitter_name: Data.twitter_name,
           donate_link: Data.donate_link,
           how_to_help: Data.how_to_help,
+          website_url: Data.website_url,
           profile_image: toAvatar(Data.profile_image),
           is_rank_private: intToBool(Data.is_rank_private),
           is_activity_private: intToBool(Data.is_activity_private),

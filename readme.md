@@ -28,7 +28,10 @@ To check if a token is valid use this function. The first parameter is the [ACCE
 
 ```js
 async function __main__() {
-  GREPPER.checkToken("YOUR_ACCESS_TOKEN_HERE")
+  GREPPER.checkToken({
+    token: process.ENV.TOKEN, // access_token of the Targeted user
+    userId: process.ENV.TOKEN, // userId of the Targeted user
+  })
     .then((res) => {
       // Your Code Goes Here
     })
@@ -47,9 +50,9 @@ Nominate a user as a super nominee.
 async function __main__() {
   const Data = await GREPPER.nominateSuper({
     nomineeId: 98467, // The user you want to nominate
-    awardName: "best_coder",
-    userId: YOUR_USER_ID,
-    token: YOUR_ACCESS_TOKEN,
+    awardName: "best_coder", // The award name
+    token: process.ENV.TOKEN, // access_token of the Targeted user
+    userId: process.ENV.TOKEN, // userId of the Targeted user
   });
   console.log(Data);
 }
@@ -58,7 +61,6 @@ __main__();
 
 ```yaml
 Award Names:
-
 most_helpful, hard_worker, class_clown, best_smile, most_likely_billion, best_hair, most_intelligent, best_coder, most_attractive, most_creative
 ```
 
@@ -140,7 +142,13 @@ Function to get codegrepper top users(community) from the community page. The fi
 
 ```js
 async function __main__() {
-  Data = await GREPPER.getCommunity("YOUR_ACCESS_TOKEN", 200);
+  Data = await GREPPER.getCommunity(
+    {
+      token: process.ENV.TOKEN, // access_token of the Targeted user
+      userId: process.ENV.TOKEN, // userId of the Targeted user
+    },
+    200
+  );
   console.log(Data);
 }
 __main__();
@@ -164,12 +172,70 @@ __main__();
 
 Fetches code Grepper user's profile information. The first parameter is the `user_id(int)`.
 
+````js
+async function __main__() {
+  Data = await GREPPER.userInfo(98467);
+  console.log(Data);
+}
+__main__();
+```### `userInfo()`
+
+Fetches code Grepper user's profile information. The first parameter is the `user_id(int)`.
+
 ```js
 async function __main__() {
   Data = await GREPPER.userInfo(98467);
   console.log(Data);
 }
 __main__();
+````
+
+### `updateProfile()`
+
+Update user's profile.
+
+```js
+async function __main__() {
+  const Data = await GREPPER.updateProfile({
+    token: process.ENV.TOKEN, // access_token of the Targeted user
+    userId: process.ENV.TOKEN, // userId of the Targeted user
+    funName: `GrepperBot`,
+    realName: `GrepperBot-betav1`,
+    websiteURL: User.website_url,
+    location: User.location,
+    donateURL: User.donate_link,
+    twitterName: User.twitter_name,
+    howToHelp: User.how_to_help,
+  });
+  console.log(Data);
+}
+__main__();
+```
+
+### `updateProfileImage()`
+
+Update user's profile image(avatar).
+
+```js
+async function __main__() {
+  const Data = await GREPPER.updateProfileImage({
+    token: process.ENV.TOKEN, // access_token of the Targeted user
+    userId: process.ENV.TOKEN, // userId of the Targeted user
+    imageURL: `https://.../example.png`, // URL of the image you want as your profile picture
+  });
+  console.log(Data);
+}
+__main__();
+```
+
+```json
+{
+  "Success": true,
+  "Message": "Profile Updated",
+  "Data": {
+    "URL": "https://www.codegrepper.com/profile/username"
+  }
+}
 ```
 
 ### `userByToken()`
@@ -178,7 +244,10 @@ Fetches code Grepper user's information by their [ACCESS_TOKEN][].
 
 ```js
 async function __main__() {
-  Data = await GREPPER.userByToken("YOUR_ACCESS_TOKEN");
+  Data = await GREPPER.userByToken({
+    token: process.ENV.TOKEN, // access_token of the Targeted user
+    userId: process.ENV.TOKEN, // userId of the Targeted user
+  });
   console.log(`Successfuly Logged in as ${Data.Name}`);
 }
 __main__();
@@ -238,7 +307,10 @@ This functions gets all the recommended users to follow that you can find on the
 
 ```js
 async function __main__() {
-  Data = await GREPPER.getWhoToFollow("YOUR_ACCESS_TOKEN");
+  Data = await GREPPER.getWhoToFollow({
+    token: process.ENV.TOKEN, // access_token of the Targeted user
+    userId: process.ENV.TOKEN, // userId of the Targeted user
+  });
   console.log(Data);
 }
 __main__();
@@ -254,6 +326,26 @@ Fetches coding answers from code grepper, enter the query in the first parameter
 async function __main__() {
   Data = await GREPPER.getAnswers("js loop");
   console.log(Data);
+}
+__main__();
+```
+
+### `saveAnswer()`
+
+Save an answer to grepper.
+
+```js
+async function __main__() {
+  const Res = await GREPPER.saveAnswer({
+    token: process.ENV.TOKEN, // access_token of the Targeted user
+    userId: process.ENV.TOKEN, // userId of the Targeted user
+    sourceURL: ``,
+    teamIds: [],
+    langauge: `js`
+    isPrivate: false, // default false
+    query: `Javascript Loop`, // required
+    answer: `for(i...`, // required
+  });
 }
 __main__();
 ```
@@ -290,7 +382,10 @@ Enables your comment notifications from the settings.
 
 ```js
 async function __main__() {
-  Data = await GREPPER.enableCommentNotif("YOUR_ACCESS_TOKEN");
+  Data = await GREPPER.enableCommentNotif({
+    token: process.ENV.TOKEN, // access_token of the Targeted user
+    userId: process.ENV.TOKEN, // userId of the Targeted user
+  });
   console.log(Data);
 }
 __main__();
@@ -302,7 +397,10 @@ Disables your comment notifications from the settings.
 
 ```js
 async function __main__() {
-  Data = await GREPPER.disableCommentNotif("YOUR_ACCESS_TOKEN");
+  Data = await GREPPER.disableCommentNotif({
+    token: process.ENV.TOKEN, // access_token of the Targeted user
+    userId: process.ENV.TOKEN, // userId of the Targeted user
+  });
   console.log(Data);
 }
 __main__();
@@ -314,7 +412,27 @@ Gets you privacy settings.
 
 ```js
 async function __main__() {
-  Data = await GREPPER.getPrivacySettings("YOUR_ACCESS_TOKEN");
+  Data = await GREPPER.getPrivacySettings({
+    token: process.ENV.TOKEN, // access_token of the Targeted user
+    userId: process.ENV.TOKEN, // userId of the Targeted user
+  });
+  console.log(Data); // Data.Data is the actual object with data
+}
+__main__();
+```
+
+## [Teams][teamsdocs]
+
+### `getPrivacySettings()`
+
+Invite users to a team.
+
+```js
+async function __main__() {
+  Data = await GREPPER.getPrivacySettings({
+    teamId: 525,
+    usersArray: [4, 98467], // Ids of the users you want
+  });
   console.log(Data); // Data.Data is the actual object with data
 }
 __main__();
@@ -326,8 +444,8 @@ __main__();
 // Fetching Privacy Settings By Username & Password
 async function __main__() {
   const Account = await GREPPER.Login({
-    email: "ruiweghuvfwbfiwyfbsdosnuc@wuif.com",
-    password: "ruiweghuvfwbfiwyfbsdosnuc@wuif.com",
+    email: "account@email.com",
+    password: "password",
   });
   const Data = await GREPPER.Login({
     token: Account.Data.access_token,
@@ -339,6 +457,7 @@ __main__();
 ```
 
 [usersdocs]: https://github.com/jareer12/code-grepper#users
+[teamsdocs]: https://github.com/jareer12/code-grepper#teams
 [answersdocs]: https://github.com/jareer12/code-grepper#answers
 [settingsdocs]: https://github.com/jareer12/code-grepper#settings
 [access_token]: https://github.com/jareer12/code-grepper#dealing-with-authorizations
