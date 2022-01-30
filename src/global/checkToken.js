@@ -30,8 +30,8 @@ async function checkToken(tokenData) {
           if (Data.users) {
             res({
               Success: true,
-              Message: `Token Valid & is Usable`,
-              Cookie: cookie,
+              Message: `Token is Working`,
+              Token: token,
             });
           }
         } catch {

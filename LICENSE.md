@@ -1,4 +1,4 @@
-Copyright (c) 2022 Jareer
+Copyright (c) 2022 Jareer Abdullah(jareer12)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

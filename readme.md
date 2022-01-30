@@ -24,7 +24,7 @@ const GREPPER = require("grepper");
 
 ### `checkToken()`
 
-To check if a token is valid use this function. The first parameter is the [ACCESS_TOKEN][].
+To check if a token is valid use this function.
 
 ```js
 async function __main__() {
