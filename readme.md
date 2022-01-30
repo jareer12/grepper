@@ -172,23 +172,13 @@ __main__();
 
 Fetches code Grepper user's profile information. The first parameter is the `user_id(int)`.
 
-````js
-async function __main__() {
-  Data = await GREPPER.userInfo(98467);
-  console.log(Data);
-}
-__main__();
-```### `userInfo()`
-
-Fetches code Grepper user's profile information. The first parameter is the `user_id(int)`.
-
 ```js
 async function __main__() {
   Data = await GREPPER.userInfo(98467);
   console.log(Data);
 }
 __main__();
-````
+```
 
 ### `updateProfile()`
 
@@ -303,7 +293,7 @@ __main__();
 
 ### `getWhoToFollow()`
 
-This functions gets all the recommended users to follow that you can find on the [feed](https://www.codegrepper.com/app/feed.php) page, first parameter is [ACCESS_TOKEN][].
+This functions gets all the recommended users to follow that you can find on the [feed](https://www.codegrepper.com/app/feed.php) page.
 
 ```js
 async function __main__() {
@@ -423,13 +413,13 @@ __main__();
 
 ## [Teams][teamsdocs]
 
-### `getPrivacySettings()`
+### `inviteToTeam()`
 
 Invite users to a team.
 
 ```js
 async function __main__() {
-  Data = await GREPPER.getPrivacySettings({
+  Data = await GREPPER.inviteToTeam({
     teamId: 525,
     usersArray: [4, 98467], // Ids of the users you want
   });
