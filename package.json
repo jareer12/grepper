@@ -1,6 +1,6 @@
 {
   "name": "grepper",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A Light-weight Wrapper for CodeGrepper APIs",
   "main": "./src/index.js",
   "scripts": {
