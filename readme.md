@@ -189,13 +189,13 @@ async function __main__() {
   const Data = await GREPPER.updateProfile({
     token: process.ENV.TOKEN, // access_token of the Targeted user
     userId: process.ENV.TOKEN, // userId of the Targeted user
-    funName: `GrepperBot`,
-    realName: `GrepperBot-betav1`,
-    websiteURL: User.website_url,
-    location: User.location,
-    donateURL: User.donate_link,
-    twitterName: User.twitter_name,
-    howToHelp: User.how_to_help,
+    funName: ``,
+    realName: ``,
+    websiteURL: "",
+    location: "",
+    donateURL: "",
+    twitterName: "",
+    howToHelp: "",
   });
   console.log(Data);
 }
